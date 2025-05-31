@@ -70,7 +70,7 @@ def generate_character(fake, runic_skills):
 
 
 def main():
-    os.makedirs('cards')
+    os.makedirs('cards', exist_ok=True)
     fake = Faker("ru_RU")
     runic_skills = convert_to_runic(SKILLS)
     for i in range(1, 11):
